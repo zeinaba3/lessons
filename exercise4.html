@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration-form</title>
+    <style>
+    body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+h1 {
+    margin: 1em auto;
+    text-align: center;
+}
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+input{
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    box-sizing: border-box;
+    padding: 1px 2px;
+}
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align:middle;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}
+
+
+    </style>
+   <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form>
+      <fieldset>
+        <label for="first-name">
+          Enter Ur first-name
+          <input id="first-name" type="text" name="first-name" required>
+        </label>
+        <label for="last-name">
+          Enter Ur last-name
+          <input id="last-name" type="text" name="last-name" required>
+        </label>
+        <label for="email">
+          Enter Ur email 
+          <input id="email" type="email" name="email" required>
+        </label>
+        <label for="new-password">
+          Create new-password 
+          <input id="new-password" type="password" name="password" pattern="[a-z0-5]{8,}" required ="">
+        </label>
+       
+      </fieldset>
+      <fieldset>
+        <label for="personal acount">
+          <input id="personal account" type="radio" name="acount-type" class="inline">
+          personal account
+        </label>
+        <label for="busines acount">
+          <input id="business account" type="radio" name="acount-type" class="inline">
+          busines account
+        </label>
+        <label for="terms and conditions">
+          <input id="terms and conditions" type="checkbox" name="terms" class="inline">
+          i accept the <a href="zeynab">terms and conditions</a>   
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile picture">
+          appload profile picture
+          <input id="profile picture" type="file" name="file" >    
+        </label>
+        <label for="age">
+          input ur age(years)
+          <input id="age" type="number" name="age" min="10" max="120">    
+        </label>
+        <select id="referrer" name="referrer">
+          <option value="">(select one)</option>
+          <option value="1">filantech telegram</option>
+          <option value="2">ffilantech facebook</option>
+          <option value="3">filantech slack</option>
+          <option value="4">Other</option>
+        </select>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach.."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
